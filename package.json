@@ -1,0 +1,17 @@
+{
+  "name": "js-proxy",
+  "version": "1.0.0",
+  "description": "shoplc-js-proxy",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "proxy-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node proxy-server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}
