@@ -69,9 +69,9 @@ app.use('/api/v1',
     headers: { Host: 'localhost' },
     onProxyReq: (proxyReq, req) => {
       proxyReq.setHeader('X-Real-IP', req.ip);
-      proxyReq.setHeader('X-Forwarded-For', req.ip);
-      proxyReq.setHeader('X-Forwarded-Proto', 'http');
-      proxyReq.setHeader('X-Forwarded-Host', 'localhost');  // Match nginx config
+      proxyReq.setHeader('x-forwarded-for', req.ip);
+      proxyReq.setHeader('x-forwarded-proto', 'http');
+      proxyReq.setHeader('x-forwarded-host', 'localhost');  // Match nginx config
     },
     onProxyRes: (_, __, res) => { res.locals.upstreamStatus = _.statusCode; },
     onError: (err, req) => {
